@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    --primary: #FF3333;
+    --primary-dark: #CC0000;
+  }
+
+  .dark {
+    --primary: #FF4444;
+    --primary-dark: #FF1111;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[--primary] text-white px-6 py-3 rounded-lg hover:bg-[--primary-dark] transition-colors;
+  }
+  
+  .carousel-dot {
+    @apply w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 transition-colors;
+  }
+  
+  .carousel-dot.active {
+    @apply bg-[--primary];
+  }
+}
+
+.slide-fade-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.slide-fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.slide-fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
