@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code2, Globe2, Shield, Laptop2 } from 'lucide-react';
 
 const services = [

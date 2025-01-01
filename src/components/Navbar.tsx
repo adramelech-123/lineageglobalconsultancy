@@ -42,7 +42,7 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button className="btn-primary">
               Get Started
             </button>
